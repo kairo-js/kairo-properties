@@ -1,9 +1,27 @@
 {
   "name": "@kairo-js/properties",
-  "version": "1.0.1",
-  "type": "module",
+  "version": "1.0.2",
   "module": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "description": "Properties types for Kairo.js",
+  "type": "module",
+  "license": "MIT",
+  "packageManager": "pnpm@10.31.0",
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kairo-js/kairo-properties.git"
+  },
   "scripts": {
     "build": "tsup"
   },
