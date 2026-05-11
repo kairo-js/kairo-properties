@@ -1,0 +1,16 @@
+{
+  "name": "kairo-properties",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
