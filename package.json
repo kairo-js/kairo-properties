@@ -1,5 +1,5 @@
 {
-  "name": "kairo-properties",
+  "name": "@kairo-js/properties",
   "version": "1.0.0",
   "type": "module",
   "main": "./lib/index.cjs",
