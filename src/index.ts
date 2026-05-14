@@ -2,13 +2,15 @@ export interface AddonProperties {
   readonly id: string;
   readonly metadata?: AddonMetadata;
   readonly header: AddonHeader;
-  readonly dependencies?: ManifestDependency[];
-  readonly requiredAddons?: RequiredAddons;
+  readonly minecraftDependencies?: MinecraftDependency[];
+  readonly dependencies?: AddonDependencies;
+  readonly optionalDependencies?: AddonDependencies;
+  readonly peerDependencies?: AddonDependencies;
   readonly tags?: SupportedTagType[];
 }
 
 export interface AddonMetadata {
-  readonly authors?: string[];
+  readonly authors?: readonly string[];
   readonly url?: string;
   readonly license?: string;
 }
@@ -34,9 +36,13 @@ export interface EngineVersion {
   readonly patch: number;
 }
 
-export interface ManifestDependency {
+export interface MinecraftDependency {
   readonly module_name: MinecraftModuleType;
   readonly version: string;
+}
+
+export interface AddonDependencies {
+  readonly [addonId: string]: string;
 }
 
 type MinecraftModuleType =
@@ -62,10 +68,6 @@ export enum MinecraftModule {
   DebugUtilities = "@minecraft/debug-utilities",
   Diagnostics = "@minecraft/diagnostics",
   ServerGraphics = "@minecraft/server-graphics",
-}
-
-export interface RequiredAddons {
-  readonly [addonId: string]: string;
 }
 
 type SupportedTagType = "official" | "approved" | "stable" | "experimental";

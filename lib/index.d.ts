@@ -2,12 +2,14 @@ interface AddonProperties {
     readonly id: string;
     readonly metadata?: AddonMetadata;
     readonly header: AddonHeader;
-    readonly dependencies?: ManifestDependency[];
-    readonly requiredAddons?: RequiredAddons;
+    readonly minecraftDependencies?: MinecraftDependency[];
+    readonly dependencies?: AddonDependencies;
+    readonly optionalDependencies?: AddonDependencies;
+    readonly peerDependencies?: AddonDependencies;
     readonly tags?: SupportedTagType[];
 }
 interface AddonMetadata {
-    readonly authors?: string[];
+    readonly authors?: readonly string[];
     readonly url?: string;
     readonly license?: string;
 }
@@ -29,9 +31,12 @@ interface EngineVersion {
     readonly minor: number;
     readonly patch: number;
 }
-interface ManifestDependency {
+interface MinecraftDependency {
     readonly module_name: MinecraftModuleType;
     readonly version: string;
+}
+interface AddonDependencies {
+    readonly [addonId: string]: string;
 }
 type MinecraftModuleType = "@minecraft/server" | "@minecraft/server-ui" | "@minecraft/server-gametest" | "@minecraft/server-editor" | "@minecraft/server-editor-private-bindings" | "@minecraft/server-net" | "@minecraft/server-admin" | "@minecraft/debug-utilities" | "@minecraft/diagnostics" | "@minecraft/server-graphics";
 declare enum MinecraftModule {
@@ -46,9 +51,6 @@ declare enum MinecraftModule {
     Diagnostics = "@minecraft/diagnostics",
     ServerGraphics = "@minecraft/server-graphics"
 }
-interface RequiredAddons {
-    readonly [addonId: string]: string;
-}
 type SupportedTagType = "official" | "approved" | "stable" | "experimental";
 declare enum SupportedTag {
     Official = "official",
@@ -57,4 +59,4 @@ declare enum SupportedTag {
     Experimental = "experimental"
 }
 
-export { type AddonHeader, type AddonMetadata, type AddonProperties, type EngineVersion, type ManifestDependency, MinecraftModule, type RequiredAddons, type SemVer, SupportedTag };
+export { type AddonDependencies, type AddonHeader, type AddonMetadata, type AddonProperties, type EngineVersion, type MinecraftDependency, MinecraftModule, type SemVer, SupportedTag };
