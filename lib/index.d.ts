@@ -6,7 +6,7 @@ interface AddonProperties {
     readonly dependencies?: AddonDependencies;
     readonly optionalDependencies?: AddonDependencies;
     readonly peerDependencies?: AddonDependencies;
-    readonly tags?: SupportedTagType[];
+    readonly tags?: readonly SupportedTagType[];
 }
 interface AddonMetadata {
     readonly authors?: readonly string[];

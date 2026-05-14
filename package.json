@@ -1,33 +1,33 @@
 {
-  "name": "@kairo-js/properties",
-  "version": "1.1.0",
-  "module": "./lib/index.js",
-  "description": "Properties types for Kairo.js",
-  "type": "module",
-  "license": "MIT",
-  "packageManager": "pnpm@10.31.0",
-  "sideEffects": false,
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./lib/index.js",
-      "types": "./lib/index.d.ts"
+    "name": "@kairo-js/properties",
+    "version": "1.2.0",
+    "module": "./lib/index.js",
+    "description": "Properties types for Kairo.js",
+    "type": "module",
+    "license": "MIT",
+    "packageManager": "pnpm@10.31.0",
+    "sideEffects": false,
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./lib/index.js",
+            "types": "./lib/index.d.ts"
+        }
+    },
+    "files": [
+        "lib"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:kairo-js/kairo-properties.git"
+    },
+    "scripts": {
+        "build": "tsup"
+    },
+    "devDependencies": {
+        "prettier": "^3.8.1",
+        "tsup": "^8.5.1",
+        "typescript": "^5.9.3"
     }
-  },
-  "files": [
-    "lib"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:kairo-js/kairo-properties.git"
-  },
-  "scripts": {
-    "build": "tsup"
-  },
-  "devDependencies": {
-    "prettier": "^3.8.1",
-    "tsup": "^8.5.1",
-    "typescript": "^5.9.3"
-  }
 }
