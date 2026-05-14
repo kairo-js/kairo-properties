@@ -1,6 +1,6 @@
 {
     "name": "@kairo-js/properties",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "module": "./lib/index.js",
     "description": "Properties types for Kairo.js",
     "type": "module",
