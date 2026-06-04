@@ -23,7 +23,8 @@
         "url": "git@github.com:kairo-js/kairo-properties.git"
     },
     "scripts": {
-        "build": "tsup"
+        "build": "tsup",
+        "release": "pnpm run build && npm publish"
     },
     "devDependencies": {
         "prettier": "^3.8.1",
