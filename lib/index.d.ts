@@ -5,7 +5,6 @@ interface AddonProperties {
     readonly minecraftDependencies?: MinecraftDependency[];
     readonly dependencies?: AddonDependencies;
     readonly optionalDependencies?: AddonDependencies;
-    readonly peerDependencies?: AddonDependencies;
     readonly tags?: SupportedTagType[];
 }
 interface AddonMetadata {
